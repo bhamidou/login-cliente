@@ -2,7 +2,7 @@ var email = "";
 var password = "";
 
 var usu = "admin@test.com";
-var pass = "1234";
+var pass = "MTIzNA==";
 var arr = "#$()|ºª~-_<+*¿?!%/&={}+`´^;\":,";
 var arrChars = arr.split("");
 
@@ -16,7 +16,7 @@ function checkUser() {
   if (checkSpecialStrings(email, arrChars)) {
     if (checkEmptyValues(email, password)) {
       if (checkMail(email)) {
-        if (email == usu && password == pass) {
+        if (email == usu && password == atob(pass)) {
           window.location.href = "./profile.html";
         } else {
           sendNotification(
