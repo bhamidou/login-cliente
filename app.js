@@ -7,7 +7,7 @@ var arr = "#$()|ºª~-_<+*¿?!%/&={}+`´^;\":,";
 var arrChars = arr.split("");
 
 
-//console.log(checkSpecialStrings("badrhamidou@gmail.com", arrChars));
+
 
 function checkUser() {
   email = document.getElementById("email").value;
@@ -116,7 +116,6 @@ function checkSpecialStrings(str, pattern) {
     while (pattern.length > j) {
       
       if (arrStr[i] == pattern[j]) {
-        console.log(arrStr[i],pattern[j], j)
         check = false;
         break;
       }
