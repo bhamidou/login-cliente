@@ -9,6 +9,9 @@ h1 {
 
 
 
-#left-img{
-    width: 45vw;
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
