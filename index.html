@@ -6,20 +6,26 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
     <script src="app.js"></script>
-    <title>Login | Badr</title>
+    <title>Login | BadrWeb</title>
 </head>
 <body>
     <h1>Welcome to BadrWeb Login</h1>
+    <br>
+    <br>
+
+    <div class="contenedor">
+        <div class="hijo">
+            <label for="">e-mail</label>
+            <input type="email" name="email" id="email">
+            <label for="">password</label>
+            <input type="password" name="password" id="password">
+            <label for=""></label>
+            <input type="submit" value="Entrar" onclick=checkUser()>
+            <div id="notificacion"></div>
+        </div>
+    </div>
     
-    <form class="contenedor">
-        <input type="email" name="email" id="email">
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Entrar" onclick=checkUser()>
-    </form>
     
-    
-    <div id="test">
-   </div>
 
     <script type="module" src="app.js"></script>
 </body>
