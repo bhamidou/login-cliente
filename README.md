@@ -6,6 +6,13 @@ Reto de la asignatura de Desarrollo del lado del Cliente:
 
 El proyecto está desplegado y funcionando en: [https://cliente.badrweb.es](https://cliente.badrweb.es)
 
+El usuario y la contraseña están en base64 para que no se vean en texto plano al acceder al app.js
+
+```
+  e-mail: b.hamidou@badrweb.es
+  password: 12345678
+```
+
 
 Crear las pantallas de login y de datos de un usuario utilizando html y js para las validaciones de los campos.
 Las ventanas tienen que tener las siguientes características:
