@@ -71,7 +71,7 @@ function saveUser(){
   document.getElementById("nombre").setAttribute("placeholder",user.name)
   
   document.getElementById("notificacion").innerHTML="<h3>test</h3>"
-
+  clearInput()
 }
 
 
