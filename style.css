@@ -15,3 +15,7 @@ h1 {
     align-items: center;
 
 }
+
+.contenedor input {
+ width: 300px;   
+}

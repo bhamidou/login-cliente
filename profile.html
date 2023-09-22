@@ -9,17 +9,35 @@
 </head>
 <body>
     <h1>Formulario</h1>
+<br>
+<br>
 
-    <form class="contenedor">
+    <form class="contenedor" id="form">
         <div class="hijo">
+            <label for="">DNI</label>
+            <input type="text" name="" id="dni" placeholder="">
+
+            <label for="">Nombre</label>
+            <input type="text" name="" id="nombre"  placeholder="">
+            <label for="">Primer apellido</label>
+            <input type="text" name="" id="last1" placeholder="">
+            <label for="">Segundo apellido</label>
+            <input type="text" name="" id="last2" placeholder="">
+
             <label for="">Email</label>
-            <input type="email" name="" id="">
+            <input type="email" name="" id="email" placeholder="">
             <label for="">password</label>
-            <input type="password" name="" id="">
+            <input type="password" name="" id="password" placeholder="">
+
+            <label for="">Fecha de nacimiento</label>
+            <input type="text" name="" id="date" placeholder="">
+
             <label for=""></label>
-            <input type="submit" value="Cambiar datos">
+            <input type="submit" value="Cambiar datos" onclick=saveUser()>
+            <input type="submit" value="Borrar" onclick=clearInput()>
         </div>
     </form>
-
+<dir id="notificacion"></dir>
+    <script type='text/javascript' src="user.js"></script>
 </body>
 </html>
