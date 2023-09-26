@@ -47,21 +47,21 @@ function saveUser() {
   if (checkRange(last1, 2, 30) && checkRange(last2, 2, 30)) {
     points++;
   }
-  if (last1.length < 2 ) {
+  if (last1.length <= 2 ) {
     message += "<li>Como mínimo 2 caracteres en el primer apellido</li>";
-  } else {
+  } else if(last1.length >= 30) {
     message += "<li>Como máximo 30 caracteres en el primer apellidos</li>";
   }
-   if(last2.length < 2 ) {
+   if(last2.length <= 2 ) {
     message += "<li>Como mínimo 2 caracteres en el segundo apellido</li>";
 
-  }else {
+  }else if(last2.length >= 30) {
     message += "<li>Como máximo 30 caracteres en el segundo apellido</li>";
   }
 
   var arr = '#$()|ºª~-_<+*¿?!%/&={}+`´^;":,';
   var arrChars = arr.split("");
-  if(checkPass(email) && checkSpecialStrings(email, arrChars)){
+  if(checkMail(email) && checkSpecialStrings(email, arrChars)){
     points++
   }else{
     message +="<li>Debe de introducir un correo válido</li>"
@@ -79,19 +79,21 @@ function saveUser() {
     message += "<li>La fecha tiene que tener el formato dd/MM/AAAA</li>";
   }
 
-  document.getElementById("nombre").setAttribute("placeholder", user.name);
-  document.getElementById("email").setAttribute("placeholder", user.email);
-  document.getElementById("last1").setAttribute("placeholder", user.last1);
-  document.getElementById("last2").setAttribute("placeholder", user.last2);
-  document.getElementById("password").setAttribute("placeholder", "●●●●●●●");
-  document.getElementById("date").setAttribute("placeholder", user.born);
-  document.getElementById("dni").setAttribute("placeholder", user.dni);
 
+  
   if(points==7){
+    document.getElementById("nombre").setAttribute("placeholder", user.name);
+    document.getElementById("email").setAttribute("placeholder", user.email);
+    document.getElementById("last1").setAttribute("placeholder", user.last1);
+    document.getElementById("last2").setAttribute("placeholder", user.last2);
+    document.getElementById("password").setAttribute("placeholder", "●●●●●●●");
+    document.getElementById("date").setAttribute("placeholder", user.born);
+    document.getElementById("dni").setAttribute("placeholder", user.dni);
+  
     sendNotification("notificacion", "Usuario guardado correctamente");
   }else{
-    sendNotification("notificacion", message);
-    sendNotification("notificacion", "Deberá de rellenar de nuevo el formulario");
+    sendNotification("notificacion", `Deberá de rellenar de nuevo el formulario \n ${message}`);
+
   }
 
   clearInput();
